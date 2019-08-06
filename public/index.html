@@ -12,8 +12,20 @@
 
     <div id="app">
 
-    <h2>{{ totalPopulation }}</h2>
-    
+      <h2>Total Population: {{ totalPopulation }}</h2>
+      <!-- <h2>{{ countryNamesArray }}</h2> -->
+
+
+    <form v-on:submit.prevent="selectCountry">
+      <select>
+         <option v-for="country in countriesArray">{{country.name}}</option>
+      </select>
+    </form>
+
+
+
+
+
     </div>
   </body>
 </html>

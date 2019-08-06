@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
 new Vue({
   el: "#app",
   data: {
-    countriesArray: []
+    countriesArray: [],
+    countryObject: {}
   },
   mounted() {
     console.log("I am mounted");
     this.fetchCountries();
-    console.log(this.countriesArray);
   },
   computed: {
     totalPopulation: function() {
@@ -17,6 +17,10 @@ new Vue({
         return sum + country.population
       },0);
   },
+     countryNamesArray: function() {
+       return this.countriesArray.map(function(country){
+         return country.name});
+     }
 },
   methods: {
     fetchCountries: function() {
