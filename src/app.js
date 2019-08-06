@@ -5,7 +5,8 @@ new Vue({
   el: "#app",
   data: {
     countriesArray: [],
-    countryObject: {}
+    countryObject: {},
+    selectedCountryName: ""
   },
   mounted() {
     console.log("I am mounted");
@@ -27,6 +28,10 @@ new Vue({
       const request = fetch("https://restcountries.eu/rest/v2/all")
       .then(response => response.json())
       .then(countries => this.countriesArray = countries)
+    },
+    selectCountry: function() {
+      this.countryObject = this.countriesArray.find(country => country.name === this.selectedCountryName
+      )
     }
   }
 

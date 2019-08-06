@@ -17,12 +17,13 @@
 
 
     <form v-on:submit.prevent="selectCountry">
-      <select>
+      <select v-model="selectedCountryName">
          <option v-for="country in countriesArray">{{country.name}}</option>
       </select>
+      <input type="submit">
     </form>
 
-
+    <h2>{{countryObject}}</h2>
 
 
 
