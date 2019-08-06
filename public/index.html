@@ -6,6 +6,8 @@
 
     </script>
     <title>Countries</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
     <h1>Countries</h1>
@@ -28,15 +30,24 @@
     </form>
 
     <h2>Country Name:{{countryObject.name}}</h2>
-    <h3>Country Flag:</h3>
     <h3>Country Population:{{countryObject.population}}</h3>
     <img v-bind:src=countryObject.flag>
-    <!-- <img v-attr=`src: {{countryObject.flag}}`> -->
 
-<h2>Favourites:</h2>
+    <div class="surround">
+    <h3>Bordering Countries:</h3>
+    <ul>
+      <li v-for="cCode in countryObject.borders">{{cCode}}</li>
+    </ul>
+  </div>
+    <!-- <img v-attr=`src: {{countryObject.flag}}`> -->
+<br>
+<div class="surround">
+
+<h3>Favourites:</h3>
 <ul>
   <li v-for="country in favouritesArray">{{country.name}}</li>
 </ul>
+</div>
 
     </div>
   </body>
