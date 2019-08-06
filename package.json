@@ -1,7 +1,6 @@
 {
   "name": "countries_start",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack -w",
@@ -11,5 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "vue": "^2.6.10"
-  }
+  },
+  "devDependencies": {
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bchutchison/countries_lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bchutchison/countries_lab/issues"
+  },
+  "homepage": "https://github.com/bchutchison/countries_lab#readme",
+  "description": ""
 }
