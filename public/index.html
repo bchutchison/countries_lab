@@ -23,13 +23,20 @@
       <input type="submit">
     </form>
 
+    <form v-on:submit.prevent="addFav">
+<input type="submit" value="Add Favourite">
+    </form>
+
     <h2>Country Name:{{countryObject.name}}</h2>
     <h3>Country Flag:</h3>
     <h3>Country Population:{{countryObject.population}}</h3>
     <img v-bind:src=countryObject.flag>
     <!-- <img v-attr=`src: {{countryObject.flag}}`> -->
 
-
+<h2>Favourites:</h2>
+<ul>
+  <li v-for="country in favouritesArray">{{country.name}}</li>
+</ul>
 
     </div>
   </body>

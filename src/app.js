@@ -6,7 +6,8 @@ new Vue({
   data: {
     countriesArray: [],
     countryObject: {},
-    selectedCountryName: ""
+    selectedCountryName: "",
+    favouritesArray: []
   },
   mounted() {
     console.log("I am mounted");
@@ -32,7 +33,12 @@ new Vue({
     selectCountry: function() {
       this.countryObject = this.countriesArray.find(country => country.name === this.selectedCountryName
       )
-    }
+    },
+     addFav: function() {
+       this.favouritesArray.push(this.countryObject);
+     }
+
+
   }
 
 });
